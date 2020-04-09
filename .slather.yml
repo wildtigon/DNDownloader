@@ -1,0 +1,6 @@
+coverage_service: cobertura_xml
+xcodeproj: DNDownloader.xcodeproj
+scheme: DNDownloader
+output_directory: reports
+ignore:
+  - DNDownloaderTests/*

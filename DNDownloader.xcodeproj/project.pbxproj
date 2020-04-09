@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,7 +41,19 @@
 		3A65FA4E243F3EA400A4E0A0 /* DNDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA3E243F3E0E00A4E0A0 /* DNDownloader.swift */; };
 		3A65FA4F243F3ED800A4E0A0 /* DNFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA32243F3D8700A4E0A0 /* DNFileManager.swift */; };
 		3A65FA50243F3ED800A4E0A0 /* DNLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA36243F3DB200A4E0A0 /* DNLogManager.swift */; };
+		3A65FA58243F454E00A4E0A0 /* DNDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA57243F454E00A4E0A0 /* DNDownloaderTests.swift */; };
+		3A65FA5A243F454E00A4E0A0 /* DNDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A65F9FE243F3BF900A4E0A0 /* DNDownloader.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A65FA5B243F454E00A4E0A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A65F9F5243F3BF900A4E0A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A65F9FD243F3BF900A4E0A0;
+			remoteInfo = DNDownloader;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A65F9FE243F3BF900A4E0A0 /* DNDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DNDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +80,9 @@
 		3A65FA3A243F3DD200A4E0A0 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		3A65FA3C243F3DE900A4E0A0 /* DNDownloaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderDelegate.swift; sourceTree = "<group>"; };
 		3A65FA3E243F3E0E00A4E0A0 /* DNDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloader.swift; sourceTree = "<group>"; };
+		3A65FA55243F454E00A4E0A0 /* DNDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A65FA57243F454E00A4E0A0 /* DNDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderTests.swift; sourceTree = "<group>"; };
+		3A65FA59243F454E00A4E0A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +100,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A65FA52243F454E00A4E0A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A65FA5A243F454E00A4E0A0 /* DNDownloader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,6 +116,7 @@
 			children = (
 				3A65FA00243F3BF900A4E0A0 /* DNDownloader */,
 				3A65FA0E243F3C9700A4E0A0 /* DNDownloaderExample */,
+				3A65FA56243F454E00A4E0A0 /* DNDownloaderTests */,
 				3A65F9FF243F3BF900A4E0A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +126,7 @@
 			children = (
 				3A65F9FE243F3BF900A4E0A0 /* DNDownloader.framework */,
 				3A65FA0D243F3C9700A4E0A0 /* DNDownloaderExample.app */,
+				3A65FA55243F454E00A4E0A0 /* DNDownloaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,6 +191,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		3A65FA56243F454E00A4E0A0 /* DNDownloaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A65FA57243F454E00A4E0A0 /* DNDownloaderTests.swift */,
+				3A65FA59243F454E00A4E0A0 /* Info.plist */,
+			);
+			path = DNDownloaderTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -215,6 +249,24 @@
 			productReference = 3A65FA0D243F3C9700A4E0A0 /* DNDownloaderExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3A65FA54243F454E00A4E0A0 /* DNDownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A65FA5F243F454E00A4E0A0 /* Build configuration list for PBXNativeTarget "DNDownloaderTests" */;
+			buildPhases = (
+				3A65FA51243F454E00A4E0A0 /* Sources */,
+				3A65FA52243F454E00A4E0A0 /* Frameworks */,
+				3A65FA53243F454E00A4E0A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A65FA5C243F454E00A4E0A0 /* PBXTargetDependency */,
+			);
+			name = DNDownloaderTests;
+			productName = DNDownloaderTests;
+			productReference = 3A65FA55243F454E00A4E0A0 /* DNDownloaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -231,6 +283,9 @@
 						LastSwiftMigration = 1140;
 					};
 					3A65FA0C243F3C9700A4E0A0 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					3A65FA54243F454E00A4E0A0 = {
 						CreatedOnToolsVersion = 11.4;
 					};
 				};
@@ -250,6 +305,7 @@
 			targets = (
 				3A65F9FD243F3BF900A4E0A0 /* DNDownloader */,
 				3A65FA0C243F3C9700A4E0A0 /* DNDownloaderExample */,
+				3A65FA54243F454E00A4E0A0 /* DNDownloaderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,6 +325,13 @@
 				3A65FA1C243F3C9900A4E0A0 /* LaunchScreen.storyboard in Resources */,
 				3A65FA19243F3C9900A4E0A0 /* Assets.xcassets in Resources */,
 				3A65FA17243F3C9700A4E0A0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A65FA53243F454E00A4E0A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +382,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A65FA51243F454E00A4E0A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A65FA58243F454E00A4E0A0 /* DNDownloaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A65FA5C243F454E00A4E0A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 3A65F9FD243F3BF900A4E0A0 /* DNDownloader */;
+			targetProxy = 3A65FA5B243F454E00A4E0A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3A65FA15243F3C9700A4E0A0 /* Main.storyboard */ = {
@@ -550,6 +630,40 @@
 			};
 			name = Release;
 		};
+		3A65FA5D243F454E00A4E0A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DNDownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.datnguyen.DNDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A65FA5E243F454E00A4E0A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DNDownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.datnguyen.DNDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -576,6 +690,15 @@
 			buildConfigurations = (
 				3A65FA1F243F3C9900A4E0A0 /* Debug */,
 				3A65FA20243F3C9900A4E0A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A65FA5F243F454E00A4E0A0 /* Build configuration list for PBXNativeTarget "DNDownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A65FA5D243F454E00A4E0A0 /* Debug */,
+				3A65FA5E243F454E00A4E0A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
