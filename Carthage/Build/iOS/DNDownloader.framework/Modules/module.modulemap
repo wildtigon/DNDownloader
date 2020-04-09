@@ -1,0 +1,11 @@
+framework module DNDownloader {
+  umbrella header "DNDownloader.h"
+
+  export *
+  module * { export * }
+}
+
+module DNDownloader.Swift {
+    header "DNDownloader-Swift.h"
+    requires objc
+}
