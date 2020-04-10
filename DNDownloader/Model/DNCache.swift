@@ -51,12 +51,12 @@ public class DNCache {
         }
     }
 
-    public static func cleanDownloadFiles(){
+    static func cleanDownloadFiles(){
         DNFileManager.shared.deleteFile(atPath: cachesDirectory.cacheDir)
         DNFileManager.shared.createDirectory(atPath: cachesDirectory.cacheDir)
     }
     
-    public static func pathsOfDownloadedfiles() -> [String]{
+    static func pathsOfDownloadedfiles() -> [String]{
         var paths = [String]()
         do {
             let subpaths = try FileManager.default.subpathsOfDirectory(atPath: cachesDirectory.cacheDir)

@@ -9,7 +9,8 @@
 import Foundation
 
 protocol DNDownloaderProtocol{
-    var logLevel : DNLogLevel { set get }
+    var logLevel: DNLogLevel { set get }
+    var downloadFolder: String { set get }
     var maxConcurrent: Int {set get }
     
     var timeout: TimeInterval { set get }
@@ -23,4 +24,6 @@ protocol DNDownloaderProtocol{
     
     func cancelTask(for diggerURL: DNURL)
     func cancelAllTasks()
+    
+    func clearAll()
 }

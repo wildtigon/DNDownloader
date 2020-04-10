@@ -16,9 +16,16 @@ public class DNDownloader: DNDownloaderProtocol {
             DNDownloaderConfig.LOG_LEVEL = logLevel
         }
     }
-    open var startImmediately = true
-    open var timeout: TimeInterval = DNDownloaderConfig.DEFAULT_TIMEOUT
     
+    open var downloadFolder: String = DNDownloaderConfig.DOWNLOAD_FOLDER {
+        didSet {
+            DNDownloaderConfig.DOWNLOAD_FOLDER = downloadFolder
+        }
+    }
+    
+    open var startImmediately = false
+    open var timeout: TimeInterval = DNDownloaderConfig.DEFAULT_TIMEOUT
+
     private var seeds: [URL: DNSeed] = [:]
     private var session: URLSession
     
@@ -193,5 +200,10 @@ extension DNDownloader{
         seeds.keys.forEach{ (url) in
             cancelTask(for: url)
         }
+    }
+    
+    public func clearAll() {
+        DNCache.cleanDownloadFiles()
+        DNCache.cleanDownloadTempFiles()
     }
 }

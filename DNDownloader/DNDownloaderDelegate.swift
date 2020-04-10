@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class DNDownloaderDelegate: NSObject {
+final public class DNDownloaderDelegate: NSObject {
     var downloader: DNDownloader?
 }
 

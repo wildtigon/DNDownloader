@@ -7,8 +7,8 @@
 //
 
 import Foundation
-public class DNDownloaderConfig {
-    static var DOWNLOAD_FOLDER = "TTO"
+open class DNDownloaderConfig {
+    static var DOWNLOAD_FOLDER = "Downloads"
     static var LOG_LEVEL: DNLogLevel = .detail
     static let DEFAULT_TIMEOUT: TimeInterval = 150
 }
