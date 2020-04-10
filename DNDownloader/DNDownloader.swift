@@ -43,9 +43,9 @@ public class DNDownloader: DNDownloaderProtocol {
     
     private init(path: String = "") {
         if path.isEmpty {
-            DNCache.cachesDirectory = DNDownloaderConfig.DOWNLOAD_FOLDER
+            DNCache.downloadsDirectory = DNDownloaderConfig.DOWNLOAD_FOLDER
         } else {
-            DNCache.cachesDirectory = path
+            DNCache.downloadsDirectory = path
         }
         downloaderDelegate = DNDownloaderDelegate()
         let sessionConfiguration = URLSessionConfiguration.default
@@ -73,7 +73,7 @@ public class DNDownloader: DNDownloaderProtocol {
         switch isURLCorrect(url) {
         case .success(let url):
             return createSeed(with: url)
-        case .failure(_):
+        case .failure(_, _):
             fatalError("Please make sure the url or urlString is correct")
         }
     }
@@ -115,7 +115,7 @@ extension DNDownloader{
             return .success(correctURL)
         } catch {
             DNLogManager.show(error)
-            return .failure(error)
+            return .failure(error, nil)
         }
     }
     
@@ -127,7 +127,7 @@ extension DNDownloader{
                 seed = seeds[value]
             }
             return seed
-        case .failure(_):
+        case .failure(_, _):
             return seed
         }
     }
@@ -136,7 +136,7 @@ extension DNDownloader{
 extension DNDownloader{
     public func cancelTask(for url: DNURL) {
         switch isURLCorrect(url) {
-        case .failure(_):
+        case .failure(_, _):
             return
         case .success(let value):
             barrierQueue.sync(flags: .barrier){
@@ -150,7 +150,7 @@ extension DNDownloader{
     
     public func stopTask(for url: DNURL) {
         switch isURLCorrect(url) {
-        case .failure(_):
+        case .failure(_, _):
             return
         case .success(let value):
             barrierQueue.sync(flags: .barrier){
@@ -167,7 +167,7 @@ extension DNDownloader{
     
     public func startTask(for url: DNURL) {
         switch isURLCorrect(url) {
-        case .failure(_):
+        case .failure(_, _):
             return
             
         case .success(let value):
@@ -202,7 +202,7 @@ extension DNDownloader{
         }
     }
     
-    public func clearAll() {
+    public func clearAllFiles() {
         DNCache.cleanDownloadFiles()
         DNCache.cleanDownloadTempFiles()
     }

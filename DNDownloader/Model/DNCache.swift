@@ -9,9 +9,9 @@
 import Foundation
 
 public class DNCache {
-    public static var cachesDirectory :String = DNDownloaderConfig.DOWNLOAD_FOLDER {
+    public static var downloadsDirectory :String = DNDownloaderConfig.DOWNLOAD_FOLDER {
         willSet {
-            DNFileManager.shared.createDirectory(atPath: newValue.cacheDir)
+            DNFileManager.shared.createDirectory(atPath: newValue.downDir)
         }
     }
     
@@ -19,23 +19,23 @@ public class DNCache {
         return url.absoluteString.md5.tmpDir
     }
     
-    static func cachePath(url : URL ) -> String{
-        return cachesDirectory.cacheDir + "/" + url.lastPathComponent
+    static func downloadPath(url : URL ) -> String{
+        return downloadsDirectory.downDir + "/" + url.lastPathComponent
     }
     
     static func removeTempFile(with url:URL){
-        let fileTempPath = tempPath(url: url)
-        DNFileManager.shared.deleteFile(atPath: fileTempPath)
+        let path = tempPath(url: url)
+        DNFileManager.shared.deleteFile(atPath: path)
     }
     
-    static func removeCacheFile(with url:URL){
-        let fileCachePath = cachePath(url: url)
-        DNFileManager.shared.deleteFile(atPath: fileCachePath)
+    static func removeDownloadedFile(with url: URL){
+        let path = downloadPath(url: url)
+        DNFileManager.shared.deleteFile(atPath: path)
     }
     
     public static func downloadedFilesSize() -> Int64{
-        let cacheDir = cachesDirectory.cacheDir
-        return DNFileManager.shared.getFilesSize(cacheDir)
+        let downDir = downloadsDirectory.downDir
+        return DNFileManager.shared.getFilesSize(downDir)
     }
     
     public static func cleanDownloadTempFiles(){
@@ -52,16 +52,16 @@ public class DNCache {
     }
 
     static func cleanDownloadFiles(){
-        DNFileManager.shared.deleteFile(atPath: cachesDirectory.cacheDir)
-        DNFileManager.shared.createDirectory(atPath: cachesDirectory.cacheDir)
+        DNFileManager.shared.deleteFile(atPath: downloadsDirectory.downDir)
+        DNFileManager.shared.createDirectory(atPath: downloadsDirectory.downDir)
     }
     
     static func pathsOfDownloadedfiles() -> [String]{
         var paths = [String]()
         do {
-            let subpaths = try FileManager.default.subpathsOfDirectory(atPath: cachesDirectory.cacheDir)
+            let subpaths = try FileManager.default.subpathsOfDirectory(atPath: downloadsDirectory.downDir)
             subpaths.forEach{
-                let filepath = cachesDirectory.cacheDir + "/" + $0
+                let filepath = downloadsDirectory.downDir + "/" + $0
                 paths.append(filepath)
             }
         } catch {

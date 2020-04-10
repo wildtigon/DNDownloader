@@ -14,7 +14,7 @@ open class DNDownloaderConfig {
 }
 
 public enum DNResult<T> {
-    case failure(Error)
+    case failure(Error, T?)
     case success(T)
 }
 

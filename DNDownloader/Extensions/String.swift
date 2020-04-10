@@ -13,7 +13,7 @@ extension String {
         return self.kf.md5
     }
     
-    public var cacheDir:String {
+    public var downDir:String {
         let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last!
         return (path as NSString).appendingPathComponent((self as NSString).lastPathComponent)
     }

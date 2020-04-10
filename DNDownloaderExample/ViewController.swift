@@ -19,20 +19,23 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Start downloading")
-       
+        
         let url = URL(string: urls[1])!
-        DNCache.cleanDownloadFiles()
-        DNCache.cleanDownloadTempFiles()
-        DNDownloader.shared.logLevel = .simple
+        DNDownloader.shared.logLevel = .none
         DNDownloader.shared.download(with: url).completion { (result) in
             switch result {
-                case .success(let url):
-                    print("Success: \(url)")
-                case .failure(let error):
-                    print("Failed: \(error)")
+            case .success(let uri):
+                print("Success: \(uri)")
+            case .failure(let error as NSError, let uri):
+                if error.code ==  DNError.fileIsExist.rawValue, let uri = uri {
+                    print("File exist: \(uri)")
+                } else {
+                    print("Failed: \(error.code)")
                 }
             }
+        }
+        print("Start downloading")
+        DNDownloader.shared.startAllTasks()
     }
 }
 

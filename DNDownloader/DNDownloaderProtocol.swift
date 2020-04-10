@@ -25,5 +25,5 @@ protocol DNDownloaderProtocol{
     func cancelTask(for diggerURL: DNURL)
     func cancelAllTasks()
     
-    func clearAll()
+    func clearAllFiles()
 }

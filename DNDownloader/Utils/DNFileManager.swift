@@ -15,7 +15,9 @@ public class DNFileManager {
     func createDirectory(atPath:String) {
         if isFileNotExist(atPath: atPath)  {
             do {
-                try FileManager.default.createDirectory(atPath: atPath, withIntermediateDirectories: true, attributes: nil)
+                try FileManager.default.createDirectory(atPath: atPath,
+                                                        withIntermediateDirectories: true,
+                                                        attributes: nil)
             } catch  {
                 DNLogManager.show(error)
             }
@@ -42,16 +44,16 @@ public class DNFileManager {
         }
     }
     
-    func getFilesSize(_ cacheDir: String) -> Int64{
-        if DNFileManager.shared.isFileNotExist(atPath: cacheDir) {
+    func getFilesSize(_ downDir: String) -> Int64{
+        if DNFileManager.shared.isFileNotExist(atPath: downDir) {
             return 0
         }
         do {
             var filesSize : Int64 = 0
-            let subpaths = try FileManager.default.subpathsOfDirectory(atPath: cacheDir)
+            let subpaths = try FileManager.default.subpathsOfDirectory(atPath: downDir)
             
             subpaths.forEach{
-                let filepath = cacheDir + "/" + $0
+                let filepath = downDir + "/" + $0
                 filesSize += fileSize(filePath: filepath)
             }
             return filesSize

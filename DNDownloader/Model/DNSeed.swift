@@ -20,12 +20,12 @@ public class DNSeed {
         return DNCache.tempPath(url: url)
     }
     
-    var cachePath: String {
-        return DNCache.cachePath(url: url)
+    var downloadPath: String {
+        return DNCache.downloadPath(url: url)
     }
     
-    var cacheFileURL: URL {
-        return URL(fileURLWithPath: DNCache.cachePath(url: url))
+    var downloadFileURL: URL {
+        return URL(fileURLWithPath: DNCache.downloadPath(url: url))
     }
     
     init(session: URLSession, url: URL, timeout: TimeInterval) {

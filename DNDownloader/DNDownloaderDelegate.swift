@@ -19,11 +19,11 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
         }
         
         // the file has been downloaded
-        if  DNFileManager.shared.isFileExist(atPath: DNCache.cachePath(url: url)){
-            let cachesURL =  URL(fileURLWithPath: DNCache.cachePath(url: url))
-            let errorInfo = ["file downloaded":cachesURL]
+        if  DNFileManager.shared.isFileExist(atPath: DNCache.downloadPath(url: url)){
+            let downloadedURI =  URL(fileURLWithPath: DNCache.downloadPath(url: url))
+            let errorInfo = ["file downloaded": downloadedURI]
             let error = NSError(domain: DNErrorDomain, code: DNError.fileIsExist.rawValue, userInfo: errorInfo)
-            notifyCompletionCallback(.failure(error), seed)
+            notifyCompletionCallback(.failure(error, downloadedURI), seed)
             return
         }
         
@@ -34,7 +34,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
                                 code: DNError.invalidStatusCode.rawValue,
                                 userInfo: ["statusCode": statusCode, NSLocalizedDescriptionKey: HTTPURLResponse.localizedString(forStatusCode: statusCode)])
             
-            notifyCompletionCallback(.failure(error), seed)
+            notifyCompletionCallback(.failure(error, nil), seed)
             return
         }
         
@@ -54,10 +54,10 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
         }
         
         if  seed.progress.totalUnitCount >= DNFileManager.shared.systemFreeSize(){
-            let errorInfo = ["out of space":url]
+            let errorInfo = ["out of space": url]
             let error = NSError(domain: DNErrorDomain, code: DNError.diskOutOfSpace.rawValue, userInfo: errorInfo)
             
-            notifyCompletionCallback(.failure(error), seed)
+            notifyCompletionCallback(.failure(error, nil), seed)
             
             return
         }
@@ -66,15 +66,15 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
             // File error
             DNFileManager.shared.deleteFile(atPath: seed.tempPath)
             let error = NSError(domain: DNErrorDomain, code: DNError.fileInfoError.rawValue, userInfo: nil)
-            notifyCompletionCallback(.failure(error), seed)
-            DNFileManager.shared.moveItem(atPath: seed.tempPath, toPath: seed.cachePath)
+            notifyCompletionCallback(.failure(error, nil), seed)
+            DNFileManager.shared.moveItem(atPath: seed.tempPath, toPath: seed.downloadPath)
             return
         }
         
         guard seed.progress.fractionCompleted != 1.0 else {
             // File exists
-            DNFileManager.shared.moveItem(atPath: seed.tempPath, toPath: seed.cachePath)
-            notifyCompletionCallback(.success(seed.cacheFileURL), seed)
+            DNFileManager.shared.moveItem(atPath: seed.tempPath, toPath: seed.downloadPath)
+            notifyCompletionCallback(.success(seed.downloadFileURL), seed)
             
             return
         }
@@ -104,9 +104,9 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
         }
         
         if let errorInfo = error  {
-            notifyCompletionCallback( .failure(errorInfo), seed)
+            notifyCompletionCallback( .failure(errorInfo, nil), seed)
         } else {
-            notifyCompletionCallback( .success(seed.cacheFileURL), seed)
+            notifyCompletionCallback( .success(seed.downloadFileURL), seed)
         }
         seed.outputStream?.close()
     }
@@ -123,7 +123,7 @@ extension DNDownloaderDelegate {
     func notifyCompletionCallback(_ result: DNResult<URL>,_ seed: DNSeed){
         guard let downloader = self.downloader else { return  }
         switch result {
-        case .failure(let error as NSError):
+        case .failure(let error as NSError, _):
             if error.code == DNError.downloadCanceled.rawValue {
                 // If a task is cancelled, the temporary file will be deleted
                 DNFileManager.shared.deleteFile(atPath: seed.tempPath)
@@ -131,7 +131,7 @@ extension DNDownloaderDelegate {
             DNLogManager.show(error)
             
         case .success(_) :
-            DNFileManager.shared.moveItem(atPath: seed.tempPath, toPath: seed.cachePath)
+            DNFileManager.shared.moveItem(atPath: seed.tempPath, toPath: seed.downloadPath)
             DNLogManager.show("Download success")
         }
         
