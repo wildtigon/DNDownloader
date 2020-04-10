@@ -152,7 +152,7 @@ extension DNDownloader{
                 guard let seed = seeds[value] else {
                     return
                 }
-                if seed.downloadTask.state == .running{
+                if seed.downloadTask.state == .running {
                     seed.downloadTask.suspend()
                     downloaderDelegate?.onSuspend(seed)
                 }

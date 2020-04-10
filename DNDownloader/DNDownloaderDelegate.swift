@@ -24,6 +24,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
             let errorInfo = ["file downloaded": downloadedURI]
             let error = NSError(domain: DNErrorDomain, code: DNError.fileIsExist.rawValue, userInfo: errorInfo)
             onComplete(.failure(error, downloadedURI), seed)
+            completionHandler(.cancel)
             return
         }
         
@@ -35,10 +36,12 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
                                 userInfo: ["statusCode": statusCode, NSLocalizedDescriptionKey: HTTPURLResponse.localizedString(forStatusCode: statusCode)])
             
             onComplete(.failure(error, nil), seed)
+            completionHandler(.cancel)
             return
         }
         
         guard let responseHeaders = (response as? HTTPURLResponse)?.allHeaderFields as? [String:String] else {
+            completionHandler(.cancel)
             return
         }
         
@@ -58,6 +61,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
             let error = NSError(domain: DNErrorDomain, code: DNError.diskOutOfSpace.rawValue, userInfo: errorInfo)
             
             onComplete(.failure(error, nil), seed)
+            completionHandler(.cancel)
             return
         }
         
@@ -66,7 +70,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
             DNFileManager.shared.deleteFile(atPath: seed.tempPath)
             let error = NSError(domain: DNErrorDomain, code: DNError.fileInfoError.rawValue, userInfo: nil)
             onComplete(.failure(error, nil), seed)
-            DNFileManager.shared.moveItem(atPath: seed.tempPath, toPath: seed.downloadPath)
+            completionHandler(.cancel)
             return
         }
         
