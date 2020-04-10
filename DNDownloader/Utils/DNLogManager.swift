@@ -15,10 +15,11 @@ final class DNLogManager {
             // Nothing to show
             break
         case .simple:
-            print("Downloader log: \(info)")
+            print("DNDownloader: \(info)")
             
         case .detail:
-            print("File   : \(file.lastPathComponent)\n"
+            print("-----DNDownloader-----\n"
+                + "File   : \(file.lastPathComponent)\n"
                 + "Method : \(method)\n"
                 + "Line   : [\(line)]\n"
                 + "Info   : \(info)\n"

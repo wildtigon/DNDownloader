@@ -22,6 +22,7 @@ final class ViewController: UIViewController {
         
         let url = URL(string: urls[1])!
         DNDownloader.shared.logLevel = .none
+        DNDownloader.shared.downloadFolder = "examples"
         DNDownloader.shared.download(with: url).completion { (result) in
             switch result {
             case .success(let uri):

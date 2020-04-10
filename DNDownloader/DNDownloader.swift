@@ -41,12 +41,7 @@ public class DNDownloader: DNDownloaderProtocol {
         }
     }
     
-    private init(path: String = "") {
-        if path.isEmpty {
-            DNCache.downloadsDirectory = DNDownloaderConfig.DOWNLOAD_FOLDER
-        } else {
-            DNCache.downloadsDirectory = path
-        }
+    private init() {
         downloaderDelegate = DNDownloaderDelegate()
         let sessionConfiguration = URLSessionConfiguration.default
         sessionConfiguration.httpMaximumConnectionsPerHost = maxConcurrent

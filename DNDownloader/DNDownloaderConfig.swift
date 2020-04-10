@@ -8,7 +8,11 @@
 
 import Foundation
 open class DNDownloaderConfig {
-    static var DOWNLOAD_FOLDER = "Downloads"
+    static var DOWNLOAD_FOLDER = "Downloads" {
+        willSet {
+            DNFileManager.shared.createDirectory(atPath: newValue.downDir)
+        }
+    }
     static var LOG_LEVEL: DNLogLevel = .detail
     static let DEFAULT_TIMEOUT: TimeInterval = 150
 }
