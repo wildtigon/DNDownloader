@@ -23,7 +23,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
             let downloadedURI =  URL(fileURLWithPath: DNCache.downloadPath(url: url))
             let errorInfo = ["file downloaded": downloadedURI]
             let error = NSError(domain: DNErrorDomain, code: DNError.fileIsExist.rawValue, userInfo: errorInfo)
-            notifyCompletionCallback(.failure(error, downloadedURI), seed)
+            onComplete(.failure(error, downloadedURI), seed)
             return
         }
         
@@ -34,7 +34,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
                                 code: DNError.invalidStatusCode.rawValue,
                                 userInfo: ["statusCode": statusCode, NSLocalizedDescriptionKey: HTTPURLResponse.localizedString(forStatusCode: statusCode)])
             
-            notifyCompletionCallback(.failure(error, nil), seed)
+            onComplete(.failure(error, nil), seed)
             return
         }
         
@@ -57,8 +57,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
             let errorInfo = ["out of space": url]
             let error = NSError(domain: DNErrorDomain, code: DNError.diskOutOfSpace.rawValue, userInfo: errorInfo)
             
-            notifyCompletionCallback(.failure(error, nil), seed)
-            
+            onComplete(.failure(error, nil), seed)
             return
         }
         
@@ -66,7 +65,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
             // File error
             DNFileManager.shared.deleteFile(atPath: seed.tempPath)
             let error = NSError(domain: DNErrorDomain, code: DNError.fileInfoError.rawValue, userInfo: nil)
-            notifyCompletionCallback(.failure(error, nil), seed)
+            onComplete(.failure(error, nil), seed)
             DNFileManager.shared.moveItem(atPath: seed.tempPath, toPath: seed.downloadPath)
             return
         }
@@ -74,8 +73,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
         guard seed.progress.fractionCompleted != 1.0 else {
             // File exists
             DNFileManager.shared.moveItem(atPath: seed.tempPath, toPath: seed.downloadPath)
-            notifyCompletionCallback(.success(seed.downloadFileURL), seed)
-            
+            onComplete(.success(seed.downloadFileURL), seed)
             return
         }
         
@@ -95,7 +93,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
         let buffer = [UInt8](data)
         
         seed.outputStream?.write(buffer, maxLength: (data as NSData).length)
-        notifyProgressCallback(seed)
+        onProgress(seed)
     }
     
     public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
@@ -104,23 +102,23 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
         }
         
         if let errorInfo = error  {
-            notifyCompletionCallback( .failure(errorInfo, nil), seed)
+            onComplete(.failure(errorInfo, nil), seed)
         } else {
-            notifyCompletionCallback( .success(seed.downloadFileURL), seed)
+            onComplete(.success(seed.downloadFileURL), seed)
         }
         seed.outputStream?.close()
     }
 }
 
 extension DNDownloaderDelegate {
-    func notifyProgressCallback(_ seed : DNSeed){
-        notifySpeedCallback(seed)
+    func onProgress(_ seed : DNSeed){
+        onUpdateSpeed(seed)
         DispatchQueue.main.safeAsync {
             seed.callbacks.forEach{ $0.progress?(seed.progress) }
         }
     }
     
-    func notifyCompletionCallback(_ result: DNResult<URL>,_ seed: DNSeed){
+    func onComplete(_ result: DNResult<URL>,_ seed: DNSeed){
         guard let downloader = self.downloader else { return  }
         switch result {
         case .failure(let error as NSError, _):
@@ -140,10 +138,10 @@ extension DNDownloaderDelegate {
         DispatchQueue.main.safeAsync {
             seed.callbacks.forEach{ $0.completion?(result) }
         }
-        notifySpeedZeroCallback(seed)
+        onSuspend(seed)
     }
     
-    func notifySpeedCallback(_ diggerSeed : DNSeed) {
+    func onUpdateSpeed(_ diggerSeed : DNSeed) {
         let progress = diggerSeed.progress
         var dataCount = progress.completedUnitCount
         let time = Double(NSDate().timeIntervalSince1970)
@@ -176,7 +174,7 @@ extension DNDownloaderDelegate {
         }
     }
     
-    func notifySpeedZeroCallback(_ diggerSeed : DNSeed){
+    func onSuspend(_ diggerSeed : DNSeed){
         DispatchQueue.main.safeAsync {
             diggerSeed.callbacks.forEach{ $0.speed?(0) }
         }

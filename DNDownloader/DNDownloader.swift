@@ -159,7 +159,7 @@ extension DNDownloader{
                 }
                 if seed.downloadTask.state == .running{
                     seed.downloadTask.suspend()
-                    downloaderDelegate?.notifySpeedZeroCallback(seed)
+                    downloaderDelegate?.onSuspend(seed)
                 }
             }
         }
@@ -178,7 +178,7 @@ extension DNDownloader{
                 
                 if seed.downloadTask.state != .running {
                     seed.downloadTask.resume()
-                    downloaderDelegate?.notifySpeedCallback(seed)
+                    downloaderDelegate?.onUpdateSpeed(seed)
                 }
             }
         }
