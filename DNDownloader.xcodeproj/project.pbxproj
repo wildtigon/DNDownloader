@@ -55,8 +55,6 @@
 		OBJ_59 /* DNFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* DNFileManager.swift */; };
 		OBJ_60 /* DNLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* DNLogManager.swift */; };
 		OBJ_67 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_78 /* DNDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* DNDownloaderTests.swift */; };
-		OBJ_79 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* XCTestManifests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +99,6 @@
 		OBJ_24 /* DNURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNURL.swift; sourceTree = "<group>"; };
 		OBJ_26 /* DNFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNFileManager.swift; sourceTree = "<group>"; };
 		OBJ_27 /* DNLogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNLogManager.swift; sourceTree = "<group>"; };
-		OBJ_30 /* DNDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderTests.swift; sourceTree = "<group>"; };
-		OBJ_31 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* DNDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNDownloader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,30 +172,11 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		OBJ_28 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_29 /* DNDownloaderTests */,
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_29 /* DNDownloaderTests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_30 /* DNDownloaderTests.swift */,
-				OBJ_31 /* XCTestManifests.swift */,
-			);
-			name = DNDownloaderTests;
-			path = Tests/DNDownloaderTests;
-			sourceTree = SOURCE_ROOT;
-		};
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_28 /* Tests */,
 				3AC461C2244420C600F78C19 /* DNDownloaderExample.app */,
 				3AC461C3244420C600F78C19 /* DNDownloaderExample */,
 				3A88814C24442105008FFECD /* DNDownloader.framework */,
@@ -407,8 +384,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_78 /* DNDownloaderTests.swift in Sources */,
-				OBJ_79 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
