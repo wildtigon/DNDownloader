@@ -25,9 +25,6 @@ let package = Package(
             name: "DNDownloader",
             path: "Sources/DNDownloader",
             dependencies: []),
-        .testTarget(
-            name: "DNDownloaderTests",
-            dependencies: ["DNDownloader"]),
     ],
     swiftLanguageVersions: [
         .version("5.1")
