@@ -76,7 +76,7 @@
 
 /* Begin PBXFileReference section */
 		3A88814C24442105008FFECD /* DNDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DNDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A88814D24442105008FFECD /* DNDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A88814D24442105008FFECD /* DNDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DNDownloaderTests.xctest; path = /Users/datnguyentien/Documents/projects/DNDownloader/build/Debug/DNDownloaderTests.xctest; sourceTree = "<absolute>"; };
 		3AC461C2244420C600F78C19 /* DNDownloaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNDownloaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC461C4244420C600F78C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AC461C8244420C600F78C19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,7 +180,6 @@
 				3AC461C2244420C600F78C19 /* DNDownloaderExample.app */,
 				3AC461C3244420C600F78C19 /* DNDownloaderExample */,
 				3A88814C24442105008FFECD /* DNDownloader.framework */,
-				3A88814D24442105008FFECD /* DNDownloaderTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
