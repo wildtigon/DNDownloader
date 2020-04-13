@@ -13,11 +13,11 @@ public class DNCache {
 //        return DNFileManager.shared.createDirectory(atPath: .downDir)
 //    }
 //
-    static func tempPath(url : URL ) -> String{
+    static func tempPath(url: URL) -> String{
         return url.absoluteString.md5.tmpDir
     }
     
-    static func downloadPath(url : URL ) -> String{
+    static func downloadPath(url: URL) -> String{
         return DNDownloaderConfig.DOWNLOAD_FOLDER.downDir + "/" + url.lastPathComponent
     }
     

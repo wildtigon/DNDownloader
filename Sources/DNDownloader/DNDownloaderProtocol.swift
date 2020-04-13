@@ -26,4 +26,5 @@ protocol DNDownloaderProtocol{
     func cancelAllTasks()
     
     func clearAllFiles()
+    func getDownloadedURI(from url: URL) -> String
 }

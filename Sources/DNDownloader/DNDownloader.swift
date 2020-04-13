@@ -201,4 +201,8 @@ extension DNDownloader{
         DNCache.cleanDownloadFiles()
         DNCache.cleanDownloadTempFiles()
     }
+    
+    public func getDownloadedURI(from url: URL) -> String {
+        return DNDownloaderConfig.DOWNLOAD_FOLDER.downDir + "/" + url.lastPathComponent
+    }
 }
