@@ -3,242 +3,245 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"DNDownloader::DNDownloaderPackageTests::ProductTarget" /* DNDownloaderPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_69 /* Build configuration list for PBXAggregateTarget "DNDownloaderPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_72 /* PBXTargetDependency */,
+			);
+			name = DNDownloaderPackageTests;
+			productName = DNDownloaderPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		3A65FA03243F3BF900A4E0A0 /* DNDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A65FA01243F3BF900A4E0A0 /* DNDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A65FA10243F3C9700A4E0A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA0F243F3C9700A4E0A0 /* AppDelegate.swift */; };
-		3A65FA14243F3C9700A4E0A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA13243F3C9700A4E0A0 /* ViewController.swift */; };
-		3A65FA17243F3C9700A4E0A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A65FA15243F3C9700A4E0A0 /* Main.storyboard */; };
-		3A65FA19243F3C9900A4E0A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A65FA18243F3C9900A4E0A0 /* Assets.xcassets */; };
-		3A65FA1C243F3C9900A4E0A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A65FA1A243F3C9900A4E0A0 /* LaunchScreen.storyboard */; };
-		3A65FA23243F3CD300A4E0A0 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA22243F3CD300A4E0A0 /* String+MD5.swift */; };
-		3A65FA25243F3CE400A4E0A0 /* OperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA24243F3CE400A4E0A0 /* OperationQueue.swift */; };
-		3A65FA28243F3D0300A4E0A0 /* DNSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA27243F3D0300A4E0A0 /* DNSeed.swift */; };
-		3A65FA2A243F3D1A00A4E0A0 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA29243F3D1A00A4E0A0 /* URLSession.swift */; };
-		3A65FA2D243F3D4000A4E0A0 /* DNDownloaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA2C243F3D4000A4E0A0 /* DNDownloaderProtocol.swift */; };
-		3A65FA2F243F3D5B00A4E0A0 /* DNURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA2E243F3D5B00A4E0A0 /* DNURL.swift */; };
-		3A65FA31243F3D7700A4E0A0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA30243F3D7700A4E0A0 /* String.swift */; };
-		3A65FA33243F3D8700A4E0A0 /* DNFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA32243F3D8700A4E0A0 /* DNFileManager.swift */; };
-		3A65FA35243F3D9C00A4E0A0 /* DNDownloaderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA34243F3D9C00A4E0A0 /* DNDownloaderConfig.swift */; };
-		3A65FA37243F3DB200A4E0A0 /* DNLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA36243F3DB200A4E0A0 /* DNLogManager.swift */; };
-		3A65FA39243F3DC500A4E0A0 /* DNCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA38243F3DC500A4E0A0 /* DNCache.swift */; };
-		3A65FA3B243F3DD200A4E0A0 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA3A243F3DD200A4E0A0 /* DispatchQueue.swift */; };
-		3A65FA3D243F3DE900A4E0A0 /* DNDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA3C243F3DE900A4E0A0 /* DNDownloaderDelegate.swift */; };
-		3A65FA3F243F3E0E00A4E0A0 /* DNDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA3E243F3E0E00A4E0A0 /* DNDownloader.swift */; };
-		3A65FA43243F3E9200A4E0A0 /* DNSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA27243F3D0300A4E0A0 /* DNSeed.swift */; };
-		3A65FA44243F3E9200A4E0A0 /* DNURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA2E243F3D5B00A4E0A0 /* DNURL.swift */; };
-		3A65FA45243F3E9200A4E0A0 /* DNCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA38243F3DC500A4E0A0 /* DNCache.swift */; };
-		3A65FA46243F3EA000A4E0A0 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA22243F3CD300A4E0A0 /* String+MD5.swift */; };
-		3A65FA47243F3EA000A4E0A0 /* OperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA24243F3CE400A4E0A0 /* OperationQueue.swift */; };
-		3A65FA48243F3EA000A4E0A0 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA29243F3D1A00A4E0A0 /* URLSession.swift */; };
-		3A65FA49243F3EA000A4E0A0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA30243F3D7700A4E0A0 /* String.swift */; };
-		3A65FA4A243F3EA000A4E0A0 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA3A243F3DD200A4E0A0 /* DispatchQueue.swift */; };
-		3A65FA4B243F3EA400A4E0A0 /* DNDownloaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA2C243F3D4000A4E0A0 /* DNDownloaderProtocol.swift */; };
-		3A65FA4C243F3EA400A4E0A0 /* DNDownloaderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA34243F3D9C00A4E0A0 /* DNDownloaderConfig.swift */; };
-		3A65FA4D243F3EA400A4E0A0 /* DNDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA3C243F3DE900A4E0A0 /* DNDownloaderDelegate.swift */; };
-		3A65FA4E243F3EA400A4E0A0 /* DNDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA3E243F3E0E00A4E0A0 /* DNDownloader.swift */; };
-		3A65FA4F243F3ED800A4E0A0 /* DNFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA32243F3D8700A4E0A0 /* DNFileManager.swift */; };
-		3A65FA50243F3ED800A4E0A0 /* DNLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA36243F3DB200A4E0A0 /* DNLogManager.swift */; };
-		3A65FA58243F454E00A4E0A0 /* DNDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65FA57243F454E00A4E0A0 /* DNDownloaderTests.swift */; };
-		3A65FA5A243F454E00A4E0A0 /* DNDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A65F9FE243F3BF900A4E0A0 /* DNDownloader.framework */; platformFilter = ios; };
+		3A88814E24442140008FFECD /* DNDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* DNDownloader.swift */; };
+		3A88814F24442140008FFECD /* DNDownloaderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DNDownloaderConfig.swift */; };
+		3A88815024442140008FFECD /* DNDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* DNDownloaderDelegate.swift */; };
+		3A88815124442140008FFECD /* DNDownloaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* DNDownloaderProtocol.swift */; };
+		3A88815224442145008FFECD /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* DispatchQueue.swift */; };
+		3A88815324442145008FFECD /* OperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* OperationQueue.swift */; };
+		3A88815424442145008FFECD /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* String+MD5.swift */; };
+		3A88815524442145008FFECD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* String.swift */; };
+		3A88815624442145008FFECD /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* URLSession.swift */; };
+		3A88815724442148008FFECD /* DNCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* DNCache.swift */; };
+		3A88815824442148008FFECD /* DNSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* DNSeed.swift */; };
+		3A88815924442148008FFECD /* DNURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* DNURL.swift */; };
+		3A88815A2444214B008FFECD /* DNFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* DNFileManager.swift */; };
+		3A88815B2444214B008FFECD /* DNLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* DNLogManager.swift */; };
+		3AC461C5244420C600F78C19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC461C4244420C600F78C19 /* AppDelegate.swift */; };
+		3AC461C9244420C600F78C19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC461C8244420C600F78C19 /* ViewController.swift */; };
+		3AC461CC244420C600F78C19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AC461CA244420C600F78C19 /* Main.storyboard */; };
+		3AC461CE244420C600F78C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC461CD244420C600F78C19 /* Assets.xcassets */; };
+		3AC461D1244420C600F78C19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AC461CF244420C600F78C19 /* LaunchScreen.storyboard */; };
+		OBJ_47 /* DNDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* DNDownloader.swift */; };
+		OBJ_48 /* DNDownloaderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DNDownloaderConfig.swift */; };
+		OBJ_49 /* DNDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* DNDownloaderDelegate.swift */; };
+		OBJ_50 /* DNDownloaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* DNDownloaderProtocol.swift */; };
+		OBJ_51 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* DispatchQueue.swift */; };
+		OBJ_52 /* OperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* OperationQueue.swift */; };
+		OBJ_53 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* String+MD5.swift */; };
+		OBJ_54 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* String.swift */; };
+		OBJ_55 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* URLSession.swift */; };
+		OBJ_56 /* DNCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* DNCache.swift */; };
+		OBJ_57 /* DNSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* DNSeed.swift */; };
+		OBJ_58 /* DNURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* DNURL.swift */; };
+		OBJ_59 /* DNFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* DNFileManager.swift */; };
+		OBJ_60 /* DNLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* DNLogManager.swift */; };
+		OBJ_67 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_78 /* DNDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* DNDownloaderTests.swift */; };
+		OBJ_79 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* XCTestManifests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3A65FA5B243F454E00A4E0A0 /* PBXContainerItemProxy */ = {
+		3AC4618724441EBF00F78C19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3A65F9F5243F3BF900A4E0A0 /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3A65F9FD243F3BF900A4E0A0;
+			remoteGlobalIDString = "DNDownloader::DNDownloader";
 			remoteInfo = DNDownloader;
+		};
+		3AC461A024441F8100F78C19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "DNDownloader::DNDownloaderTests";
+			remoteInfo = DNDownloaderTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A65F9FE243F3BF900A4E0A0 /* DNDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DNDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A65FA01243F3BF900A4E0A0 /* DNDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNDownloader.h; sourceTree = "<group>"; };
-		3A65FA02243F3BF900A4E0A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A65FA0D243F3C9700A4E0A0 /* DNDownloaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNDownloaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A65FA0F243F3C9700A4E0A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A65FA13243F3C9700A4E0A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A65FA16243F3C9700A4E0A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3A65FA18243F3C9900A4E0A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3A65FA1B243F3C9900A4E0A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3A65FA1D243F3C9900A4E0A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A65FA22243F3CD300A4E0A0 /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
-		3A65FA24243F3CE400A4E0A0 /* OperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueue.swift; sourceTree = "<group>"; };
-		3A65FA27243F3D0300A4E0A0 /* DNSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSeed.swift; sourceTree = "<group>"; };
-		3A65FA29243F3D1A00A4E0A0 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
-		3A65FA2C243F3D4000A4E0A0 /* DNDownloaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderProtocol.swift; sourceTree = "<group>"; };
-		3A65FA2E243F3D5B00A4E0A0 /* DNURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNURL.swift; sourceTree = "<group>"; };
-		3A65FA30243F3D7700A4E0A0 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		3A65FA32243F3D8700A4E0A0 /* DNFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNFileManager.swift; sourceTree = "<group>"; };
-		3A65FA34243F3D9C00A4E0A0 /* DNDownloaderConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderConfig.swift; sourceTree = "<group>"; };
-		3A65FA36243F3DB200A4E0A0 /* DNLogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNLogManager.swift; sourceTree = "<group>"; };
-		3A65FA38243F3DC500A4E0A0 /* DNCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNCache.swift; sourceTree = "<group>"; };
-		3A65FA3A243F3DD200A4E0A0 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
-		3A65FA3C243F3DE900A4E0A0 /* DNDownloaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderDelegate.swift; sourceTree = "<group>"; };
-		3A65FA3E243F3E0E00A4E0A0 /* DNDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloader.swift; sourceTree = "<group>"; };
-		3A65FA55243F454E00A4E0A0 /* DNDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A65FA57243F454E00A4E0A0 /* DNDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderTests.swift; sourceTree = "<group>"; };
-		3A65FA59243F454E00A4E0A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A88814C24442105008FFECD /* DNDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DNDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A88814D24442105008FFECD /* DNDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AC461C2244420C600F78C19 /* DNDownloaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNDownloaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AC461C4244420C600F78C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3AC461C8244420C600F78C19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3AC461CB244420C600F78C19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AC461CD244420C600F78C19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AC461D0244420C600F78C19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3AC461D2244420C600F78C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		OBJ_11 /* DNDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloader.swift; sourceTree = "<group>"; };
+		OBJ_12 /* DNDownloaderConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderConfig.swift; sourceTree = "<group>"; };
+		OBJ_13 /* DNDownloaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderDelegate.swift; sourceTree = "<group>"; };
+		OBJ_14 /* DNDownloaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderProtocol.swift; sourceTree = "<group>"; };
+		OBJ_16 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
+		OBJ_17 /* OperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueue.swift; sourceTree = "<group>"; };
+		OBJ_18 /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		OBJ_19 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		OBJ_20 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		OBJ_22 /* DNCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNCache.swift; sourceTree = "<group>"; };
+		OBJ_23 /* DNSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSeed.swift; sourceTree = "<group>"; };
+		OBJ_24 /* DNURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNURL.swift; sourceTree = "<group>"; };
+		OBJ_26 /* DNFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNFileManager.swift; sourceTree = "<group>"; };
+		OBJ_27 /* DNLogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNLogManager.swift; sourceTree = "<group>"; };
+		OBJ_30 /* DNDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDownloaderTests.swift; sourceTree = "<group>"; };
+		OBJ_31 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* DNDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNDownloader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3A65F9FB243F3BF900A4E0A0 /* Frameworks */ = {
+		3AC461BF244420C600F78C19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A65FA0A243F3C9700A4E0A0 /* Frameworks */ = {
+		OBJ_61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A65FA52243F454E00A4E0A0 /* Frameworks */ = {
+		OBJ_80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				3A65FA5A243F454E00A4E0A0 /* DNDownloader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A65F9F4243F3BF900A4E0A0 = {
+		3AC461C3244420C600F78C19 /* DNDownloaderExample */ = {
 			isa = PBXGroup;
 			children = (
-				3A65FA00243F3BF900A4E0A0 /* DNDownloader */,
-				3A65FA0E243F3C9700A4E0A0 /* DNDownloaderExample */,
-				3A65FA56243F454E00A4E0A0 /* DNDownloaderTests */,
-				3A65F9FF243F3BF900A4E0A0 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		3A65F9FF243F3BF900A4E0A0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3A65F9FE243F3BF900A4E0A0 /* DNDownloader.framework */,
-				3A65FA0D243F3C9700A4E0A0 /* DNDownloaderExample.app */,
-				3A65FA55243F454E00A4E0A0 /* DNDownloaderTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3A65FA00243F3BF900A4E0A0 /* DNDownloader */ = {
-			isa = PBXGroup;
-			children = (
-				3A65FA2B243F3D2800A4E0A0 /* Utils */,
-				3A65FA26243F3CF900A4E0A0 /* Model */,
-				3A65FA21243F3CBE00A4E0A0 /* Extensions */,
-				3A65FA01243F3BF900A4E0A0 /* DNDownloader.h */,
-				3A65FA02243F3BF900A4E0A0 /* Info.plist */,
-				3A65FA2C243F3D4000A4E0A0 /* DNDownloaderProtocol.swift */,
-				3A65FA34243F3D9C00A4E0A0 /* DNDownloaderConfig.swift */,
-				3A65FA3C243F3DE900A4E0A0 /* DNDownloaderDelegate.swift */,
-				3A65FA3E243F3E0E00A4E0A0 /* DNDownloader.swift */,
-			);
-			path = DNDownloader;
-			sourceTree = "<group>";
-		};
-		3A65FA0E243F3C9700A4E0A0 /* DNDownloaderExample */ = {
-			isa = PBXGroup;
-			children = (
-				3A65FA0F243F3C9700A4E0A0 /* AppDelegate.swift */,
-				3A65FA13243F3C9700A4E0A0 /* ViewController.swift */,
-				3A65FA15243F3C9700A4E0A0 /* Main.storyboard */,
-				3A65FA18243F3C9900A4E0A0 /* Assets.xcassets */,
-				3A65FA1A243F3C9900A4E0A0 /* LaunchScreen.storyboard */,
-				3A65FA1D243F3C9900A4E0A0 /* Info.plist */,
+				3AC461C4244420C600F78C19 /* AppDelegate.swift */,
+				3AC461C8244420C600F78C19 /* ViewController.swift */,
+				3AC461CA244420C600F78C19 /* Main.storyboard */,
+				3AC461CD244420C600F78C19 /* Assets.xcassets */,
+				3AC461CF244420C600F78C19 /* LaunchScreen.storyboard */,
+				3AC461D2244420C600F78C19 /* Info.plist */,
 			);
 			path = DNDownloaderExample;
 			sourceTree = "<group>";
 		};
-		3A65FA21243F3CBE00A4E0A0 /* Extensions */ = {
+		OBJ_15 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3A65FA22243F3CD300A4E0A0 /* String+MD5.swift */,
-				3A65FA24243F3CE400A4E0A0 /* OperationQueue.swift */,
-				3A65FA29243F3D1A00A4E0A0 /* URLSession.swift */,
-				3A65FA30243F3D7700A4E0A0 /* String.swift */,
-				3A65FA3A243F3DD200A4E0A0 /* DispatchQueue.swift */,
+				OBJ_16 /* DispatchQueue.swift */,
+				OBJ_17 /* OperationQueue.swift */,
+				OBJ_18 /* String+MD5.swift */,
+				OBJ_19 /* String.swift */,
+				OBJ_20 /* URLSession.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		3A65FA26243F3CF900A4E0A0 /* Model */ = {
+		OBJ_21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3A65FA27243F3D0300A4E0A0 /* DNSeed.swift */,
-				3A65FA2E243F3D5B00A4E0A0 /* DNURL.swift */,
-				3A65FA38243F3DC500A4E0A0 /* DNCache.swift */,
+				OBJ_22 /* DNCache.swift */,
+				OBJ_23 /* DNSeed.swift */,
+				OBJ_24 /* DNURL.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3A65FA2B243F3D2800A4E0A0 /* Utils */ = {
+		OBJ_25 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3A65FA32243F3D8700A4E0A0 /* DNFileManager.swift */,
-				3A65FA36243F3DB200A4E0A0 /* DNLogManager.swift */,
+				OBJ_26 /* DNFileManager.swift */,
+				OBJ_27 /* DNLogManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		3A65FA56243F454E00A4E0A0 /* DNDownloaderTests */ = {
+		OBJ_28 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3A65FA57243F454E00A4E0A0 /* DNDownloaderTests.swift */,
-				3A65FA59243F454E00A4E0A0 /* Info.plist */,
+				OBJ_29 /* DNDownloaderTests */,
 			);
-			path = DNDownloaderTests;
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_29 /* DNDownloaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_30 /* DNDownloaderTests.swift */,
+				OBJ_31 /* XCTestManifests.swift */,
+			);
+			name = DNDownloaderTests;
+			path = Tests/DNDownloaderTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_28 /* Tests */,
+				3AC461C2244420C600F78C19 /* DNDownloaderExample.app */,
+				3AC461C3244420C600F78C19 /* DNDownloaderExample */,
+				3A88814C24442105008FFECD /* DNDownloader.framework */,
+				3A88814D24442105008FFECD /* DNDownloaderTests.xctest */,
+			);
 			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* DNDownloader */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* DNDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* DNDownloader.h */,
+				OBJ_10 /* Info.plist */,
+				OBJ_11 /* DNDownloader.swift */,
+				OBJ_12 /* DNDownloaderConfig.swift */,
+				OBJ_13 /* DNDownloaderDelegate.swift */,
+				OBJ_14 /* DNDownloaderProtocol.swift */,
+				OBJ_15 /* Extensions */,
+				OBJ_21 /* Model */,
+				OBJ_25 /* Utils */,
+			);
+			name = DNDownloader;
+			path = Sources/DNDownloader;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		3A65F9F9243F3BF900A4E0A0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A65FA03243F3BF900A4E0A0 /* DNDownloader.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		3A65F9FD243F3BF900A4E0A0 /* DNDownloader */ = {
+		3AC461C1244420C600F78C19 /* DNDownloaderExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A65FA06243F3BF900A4E0A0 /* Build configuration list for PBXNativeTarget "DNDownloader" */;
+			buildConfigurationList = 3AC461D3244420C600F78C19 /* Build configuration list for PBXNativeTarget "DNDownloaderExample" */;
 			buildPhases = (
-				3A65F9F9243F3BF900A4E0A0 /* Headers */,
-				3A65F9FA243F3BF900A4E0A0 /* Sources */,
-				3A65F9FB243F3BF900A4E0A0 /* Frameworks */,
-				3A65F9FC243F3BF900A4E0A0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DNDownloader;
-			productName = DNDownloader;
-			productReference = 3A65F9FE243F3BF900A4E0A0 /* DNDownloader.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		3A65FA0C243F3C9700A4E0A0 /* DNDownloaderExample */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A65FA1E243F3C9900A4E0A0 /* Build configuration list for PBXNativeTarget "DNDownloaderExample" */;
-			buildPhases = (
-				3A65FA09243F3C9700A4E0A0 /* Sources */,
-				3A65FA0A243F3C9700A4E0A0 /* Frameworks */,
-				3A65FA0B243F3C9700A4E0A0 /* Resources */,
+				3AC461BE244420C600F78C19 /* Sources */,
+				3AC461BF244420C600F78C19 /* Frameworks */,
+				3AC461C0244420C600F78C19 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -246,174 +249,197 @@
 			);
 			name = DNDownloaderExample;
 			productName = DNDownloaderExample;
-			productReference = 3A65FA0D243F3C9700A4E0A0 /* DNDownloaderExample.app */;
+			productReference = 3AC461C2244420C600F78C19 /* DNDownloaderExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A65FA54243F454E00A4E0A0 /* DNDownloaderTests */ = {
+		"DNDownloader::DNDownloader" /* DNDownloader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A65FA5F243F454E00A4E0A0 /* Build configuration list for PBXNativeTarget "DNDownloaderTests" */;
+			buildConfigurationList = OBJ_43 /* Build configuration list for PBXNativeTarget "DNDownloader" */;
 			buildPhases = (
-				3A65FA51243F454E00A4E0A0 /* Sources */,
-				3A65FA52243F454E00A4E0A0 /* Frameworks */,
-				3A65FA53243F454E00A4E0A0 /* Resources */,
+				OBJ_46 /* Sources */,
+				OBJ_61 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3A65FA5C243F454E00A4E0A0 /* PBXTargetDependency */,
+			);
+			name = DNDownloader;
+			productName = DNDownloader;
+			productReference = 3A88814C24442105008FFECD /* DNDownloader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"DNDownloader::DNDownloaderTests" /* DNDownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_74 /* Build configuration list for PBXNativeTarget "DNDownloaderTests" */;
+			buildPhases = (
+				OBJ_77 /* Sources */,
+				OBJ_80 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_82 /* PBXTargetDependency */,
 			);
 			name = DNDownloaderTests;
 			productName = DNDownloaderTests;
-			productReference = 3A65FA55243F454E00A4E0A0 /* DNDownloaderTests.xctest */;
+			productReference = 3A88814D24442105008FFECD /* DNDownloaderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"DNDownloader::SwiftPMPackageDescription" /* DNDownloaderPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_63 /* Build configuration list for PBXNativeTarget "DNDownloaderPackageDescription" */;
+			buildPhases = (
+				OBJ_66 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNDownloaderPackageDescription;
+			productName = DNDownloaderPackageDescription;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3A65F9F5243F3BF900A4E0A0 /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = DN;
+				LastSwiftMigration = 9999;
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
-				ORGANIZATIONNAME = "Dat Nguyen Tien";
+				LastUpgradeCheck = 9999;
 				TargetAttributes = {
-					3A65F9FD243F3BF900A4E0A0 = {
+					3AC461C1244420C600F78C19 = {
 						CreatedOnToolsVersion = 11.4;
-						LastSwiftMigration = 1140;
-					};
-					3A65FA0C243F3C9700A4E0A0 = {
-						CreatedOnToolsVersion = 11.4;
-					};
-					3A65FA54243F454E00A4E0A0 = {
-						CreatedOnToolsVersion = 11.4;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 3A65F9F8243F3BF900A4E0A0 /* Build configuration list for PBXProject "DNDownloader" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "DNDownloader" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 3A65F9F4243F3BF900A4E0A0;
-			productRefGroup = 3A65F9FF243F3BF900A4E0A0 /* Products */;
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_5;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A65F9FD243F3BF900A4E0A0 /* DNDownloader */,
-				3A65FA0C243F3C9700A4E0A0 /* DNDownloaderExample */,
-				3A65FA54243F454E00A4E0A0 /* DNDownloaderTests */,
+				"DNDownloader::DNDownloader" /* DNDownloader */,
+				"DNDownloader::SwiftPMPackageDescription" /* DNDownloaderPackageDescription */,
+				"DNDownloader::DNDownloaderPackageTests::ProductTarget" /* DNDownloaderPackageTests */,
+				"DNDownloader::DNDownloaderTests" /* DNDownloaderTests */,
+				3AC461C1244420C600F78C19 /* DNDownloaderExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3A65F9FC243F3BF900A4E0A0 /* Resources */ = {
+		3AC461C0244420C600F78C19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A65FA0B243F3C9700A4E0A0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A65FA1C243F3C9900A4E0A0 /* LaunchScreen.storyboard in Resources */,
-				3A65FA19243F3C9900A4E0A0 /* Assets.xcassets in Resources */,
-				3A65FA17243F3C9700A4E0A0 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A65FA53243F454E00A4E0A0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3AC461D1244420C600F78C19 /* LaunchScreen.storyboard in Resources */,
+				3AC461CE244420C600F78C19 /* Assets.xcassets in Resources */,
+				3AC461CC244420C600F78C19 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3A65F9FA243F3BF900A4E0A0 /* Sources */ = {
+		3AC461BE244420C600F78C19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A65FA39243F3DC500A4E0A0 /* DNCache.swift in Sources */,
-				3A65FA35243F3D9C00A4E0A0 /* DNDownloaderConfig.swift in Sources */,
-				3A65FA3F243F3E0E00A4E0A0 /* DNDownloader.swift in Sources */,
-				3A65FA23243F3CD300A4E0A0 /* String+MD5.swift in Sources */,
-				3A65FA25243F3CE400A4E0A0 /* OperationQueue.swift in Sources */,
-				3A65FA2A243F3D1A00A4E0A0 /* URLSession.swift in Sources */,
-				3A65FA33243F3D8700A4E0A0 /* DNFileManager.swift in Sources */,
-				3A65FA3D243F3DE900A4E0A0 /* DNDownloaderDelegate.swift in Sources */,
-				3A65FA2F243F3D5B00A4E0A0 /* DNURL.swift in Sources */,
-				3A65FA37243F3DB200A4E0A0 /* DNLogManager.swift in Sources */,
-				3A65FA31243F3D7700A4E0A0 /* String.swift in Sources */,
-				3A65FA2D243F3D4000A4E0A0 /* DNDownloaderProtocol.swift in Sources */,
-				3A65FA28243F3D0300A4E0A0 /* DNSeed.swift in Sources */,
-				3A65FA3B243F3DD200A4E0A0 /* DispatchQueue.swift in Sources */,
+				3AC461C9244420C600F78C19 /* ViewController.swift in Sources */,
+				3A88815A2444214B008FFECD /* DNFileManager.swift in Sources */,
+				3A88814E24442140008FFECD /* DNDownloader.swift in Sources */,
+				3A88815724442148008FFECD /* DNCache.swift in Sources */,
+				3A88815824442148008FFECD /* DNSeed.swift in Sources */,
+				3A88815624442145008FFECD /* URLSession.swift in Sources */,
+				3A88815524442145008FFECD /* String.swift in Sources */,
+				3A88814F24442140008FFECD /* DNDownloaderConfig.swift in Sources */,
+				3A88815424442145008FFECD /* String+MD5.swift in Sources */,
+				3AC461C5244420C600F78C19 /* AppDelegate.swift in Sources */,
+				3A88815924442148008FFECD /* DNURL.swift in Sources */,
+				3A88815124442140008FFECD /* DNDownloaderProtocol.swift in Sources */,
+				3A88815B2444214B008FFECD /* DNLogManager.swift in Sources */,
+				3A88815324442145008FFECD /* OperationQueue.swift in Sources */,
+				3A88815224442145008FFECD /* DispatchQueue.swift in Sources */,
+				3A88815024442140008FFECD /* DNDownloaderDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A65FA09243F3C9700A4E0A0 /* Sources */ = {
+		OBJ_46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				3A65FA4C243F3EA400A4E0A0 /* DNDownloaderConfig.swift in Sources */,
-				3A65FA4F243F3ED800A4E0A0 /* DNFileManager.swift in Sources */,
-				3A65FA14243F3C9700A4E0A0 /* ViewController.swift in Sources */,
-				3A65FA4A243F3EA000A4E0A0 /* DispatchQueue.swift in Sources */,
-				3A65FA4D243F3EA400A4E0A0 /* DNDownloaderDelegate.swift in Sources */,
-				3A65FA10243F3C9700A4E0A0 /* AppDelegate.swift in Sources */,
-				3A65FA49243F3EA000A4E0A0 /* String.swift in Sources */,
-				3A65FA4B243F3EA400A4E0A0 /* DNDownloaderProtocol.swift in Sources */,
-				3A65FA46243F3EA000A4E0A0 /* String+MD5.swift in Sources */,
-				3A65FA45243F3E9200A4E0A0 /* DNCache.swift in Sources */,
-				3A65FA44243F3E9200A4E0A0 /* DNURL.swift in Sources */,
-				3A65FA48243F3EA000A4E0A0 /* URLSession.swift in Sources */,
-				3A65FA50243F3ED800A4E0A0 /* DNLogManager.swift in Sources */,
-				3A65FA47243F3EA000A4E0A0 /* OperationQueue.swift in Sources */,
-				3A65FA43243F3E9200A4E0A0 /* DNSeed.swift in Sources */,
-				3A65FA4E243F3EA400A4E0A0 /* DNDownloader.swift in Sources */,
+				OBJ_47 /* DNDownloader.swift in Sources */,
+				OBJ_48 /* DNDownloaderConfig.swift in Sources */,
+				OBJ_49 /* DNDownloaderDelegate.swift in Sources */,
+				OBJ_50 /* DNDownloaderProtocol.swift in Sources */,
+				OBJ_51 /* DispatchQueue.swift in Sources */,
+				OBJ_52 /* OperationQueue.swift in Sources */,
+				OBJ_53 /* String+MD5.swift in Sources */,
+				OBJ_54 /* String.swift in Sources */,
+				OBJ_55 /* URLSession.swift in Sources */,
+				OBJ_56 /* DNCache.swift in Sources */,
+				OBJ_57 /* DNSeed.swift in Sources */,
+				OBJ_58 /* DNURL.swift in Sources */,
+				OBJ_59 /* DNFileManager.swift in Sources */,
+				OBJ_60 /* DNLogManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A65FA51243F454E00A4E0A0 /* Sources */ = {
+		OBJ_66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				3A65FA58243F454E00A4E0A0 /* DNDownloaderTests.swift in Sources */,
+				OBJ_67 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_78 /* DNDownloaderTests.swift in Sources */,
+				OBJ_79 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3A65FA5C243F454E00A4E0A0 /* PBXTargetDependency */ = {
+		OBJ_72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			platformFilter = ios;
-			target = 3A65F9FD243F3BF900A4E0A0 /* DNDownloader */;
-			targetProxy = 3A65FA5B243F454E00A4E0A0 /* PBXContainerItemProxy */;
+			target = "DNDownloader::DNDownloaderTests" /* DNDownloaderTests */;
+			targetProxy = 3AC461A024441F8100F78C19 /* PBXContainerItemProxy */;
+		};
+		OBJ_82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "DNDownloader::DNDownloader" /* DNDownloader */;
+			targetProxy = 3AC4618724441EBF00F78C19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3A65FA15243F3C9700A4E0A0 /* Main.storyboard */ = {
+		3AC461CA244420C600F78C19 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3A65FA16243F3C9700A4E0A0 /* Base */,
+				3AC461CB244420C600F78C19 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		3A65FA1A243F3C9900A4E0A0 /* LaunchScreen.storyboard */ = {
+		3AC461CF244420C600F78C19 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3A65FA1B243F3C9900A4E0A0 /* Base */,
+				3AC461D0244420C600F78C19 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -421,16 +447,16 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3A65FA04243F3BF900A4E0A0 /* Debug */ = {
+		3AC461D4244420C600F78C19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -453,15 +479,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CODE_SIGN_STYLE = Automatic;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -472,28 +495,30 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = DNDownloaderExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.datnguyen.DNDownloaderExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3A65FA05243F3BF900A4E0A0 /* Release */ = {
+		3AC461D5244420C600F78C19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -516,9 +541,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -529,181 +553,265 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = DNDownloaderExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.datnguyen.DNDownloaderExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		3A65FA07243F3BF900A4E0A0 /* Debug */ = {
+		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DNDownloader/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.datnguyen.DNDownloader;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		3A65FA08243F3BF900A4E0A0 /* Release */ = {
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = DNDownloader.xcodeproj/DNDownloader_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = DNDownloader;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.1;
+				TARGET_NAME = DNDownloader;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = DNDownloader.xcodeproj/DNDownloader_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = DNDownloader;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.1;
+				TARGET_NAME = DNDownloader;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Users/datnguyentien/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Users/datnguyentien/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DNDownloader/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.datnguyen.DNDownloader;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3A65FA1F243F3C9900A4E0A0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DNDownloaderExample/Info.plist;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = DNDownloader.xcodeproj/DNDownloaderTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.datnguyen.DNDownloaderExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.1;
+				TARGET_NAME = DNDownloaderTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		3A65FA20243F3C9900A4E0A0 /* Release */ = {
+		OBJ_76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DNDownloaderExample/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = DNDownloader.xcodeproj/DNDownloaderTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.datnguyen.DNDownloaderExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		3A65FA5D243F454E00A4E0A0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DNDownloaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.datnguyen.DNDownloaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3A65FA5E243F454E00A4E0A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DNDownloaderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.datnguyen.DNDownloaderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.1;
+				TARGET_NAME = DNDownloaderTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A65F9F8243F3BF900A4E0A0 /* Build configuration list for PBXProject "DNDownloader" */ = {
+		3AC461D3244420C600F78C19 /* Build configuration list for PBXNativeTarget "DNDownloaderExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A65FA04243F3BF900A4E0A0 /* Debug */,
-				3A65FA05243F3BF900A4E0A0 /* Release */,
+				3AC461D4244420C600F78C19 /* Debug */,
+				3AC461D5244420C600F78C19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A65FA06243F3BF900A4E0A0 /* Build configuration list for PBXNativeTarget "DNDownloader" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "DNDownloader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A65FA07243F3BF900A4E0A0 /* Debug */,
-				3A65FA08243F3BF900A4E0A0 /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A65FA1E243F3C9900A4E0A0 /* Build configuration list for PBXNativeTarget "DNDownloaderExample" */ = {
+		OBJ_43 /* Build configuration list for PBXNativeTarget "DNDownloader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A65FA1F243F3C9900A4E0A0 /* Debug */,
-				3A65FA20243F3C9900A4E0A0 /* Release */,
+				OBJ_44 /* Debug */,
+				OBJ_45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A65FA5F243F454E00A4E0A0 /* Build configuration list for PBXNativeTarget "DNDownloaderTests" */ = {
+		OBJ_63 /* Build configuration list for PBXNativeTarget "DNDownloaderPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A65FA5D243F454E00A4E0A0 /* Debug */,
-				3A65FA5E243F454E00A4E0A0 /* Release */,
+				OBJ_64 /* Debug */,
+				OBJ_65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_69 /* Build configuration list for PBXAggregateTarget "DNDownloaderPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_70 /* Debug */,
+				OBJ_71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_74 /* Build configuration list for PBXNativeTarget "DNDownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_75 /* Debug */,
+				OBJ_76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3A65F9F5243F3BF900A4E0A0 /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }

@@ -12,7 +12,6 @@ let package = Package(
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "DNDownloader",
-            path: "./DNDownloader",
             targets: ["DNDownloader"]),
     ],
     dependencies: [
@@ -24,11 +23,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "DNDownloader",
-            path: "./DNDownloader",
             dependencies: []),
         .testTarget(
             name: "DNDownloaderTests",
             dependencies: ["DNDownloader"]),
     ],
-    swiftLanguageVersions: [.v5_1]
+    swiftLanguageVersions: [
+        .version("5.1")
+    ]
 )
