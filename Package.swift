@@ -13,6 +13,7 @@ let package = Package(
         .library(
             name: "DNDownloader",
             targets: ["DNDownloader"]),
+            path: "./DNDownloader",
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,8 +25,10 @@ let package = Package(
         .target(
             name: "DNDownloader",
             dependencies: []),
+            path: "./DNDownloader",
         .testTarget(
             name: "DNDownloaderTests",
             dependencies: ["DNDownloader"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5_1]
 )
