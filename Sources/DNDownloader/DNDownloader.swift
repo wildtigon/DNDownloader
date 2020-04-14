@@ -205,4 +205,8 @@ extension DNDownloader{
     public func getDownloadedURI(from url: URL) -> String {
         return DNDownloaderConfig.DOWNLOAD_FOLDER.downDir + "/" + url.lastPathComponent
     }
+    
+    public func getDownloadedURI(from fileName: String) -> String {
+        return DNDownloaderConfig.DOWNLOAD_FOLDER.downDir + "/" + fileName
+    }
 }
