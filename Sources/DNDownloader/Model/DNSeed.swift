@@ -28,10 +28,10 @@ public class DNSeed {
         return URL(fileURLWithPath: DNCache.downloadPath(url: url))
     }
     
-    init(session: URLSession, url: URL, timeout: TimeInterval) {
+    init(session: URLSession, url: URL, headers: [String: Any], timeout: TimeInterval) {
         self.progress = Progress()
         self.callbacks = []
-        self.downloadTask = session.dataTask(with: url, timeout: timeout)
+        self.downloadTask = session.dataTask(with: url, headers: headers, timeout: timeout)
         self.url = url
     }
     

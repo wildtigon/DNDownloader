@@ -64,10 +64,10 @@ public class DNDownloader: DNDownloaderProtocol {
     }
     
     @discardableResult
-    public func download(with url: DNURL) -> DNSeed {
+    public func download(with url: DNURL, headers: [String: Any] = [:]) -> DNSeed {
         switch isURLCorrect(url) {
         case .success(let url):
-            return createSeed(with: url)
+            return createSeed(with: url, headers: headers)
         case .failure(_, _):
             fatalError("Please make sure the url or urlString is correct")
         }
@@ -75,13 +75,13 @@ public class DNDownloader: DNDownloaderProtocol {
 }
 
 extension DNDownloader{
-    private func createSeed(with url: URL) -> DNSeed {
+    private func createSeed(with url: URL, headers: [String: Any]) -> DNSeed {
         if let seed = findSeed(with: url) {
             return seed
         } else {
             barrierQueue.sync(flags: .barrier){
                 let timeout = self.timeout == 0.0 ? DNDownloaderConfig.DEFAULT_TIMEOUT : self.timeout
-                seeds[url] = DNSeed(session: session, url: url, timeout: timeout)
+                seeds[url] = DNSeed(session: session, url: url, headers: headers, timeout: timeout)
             }
             
             let seed = findSeed(with: url)!

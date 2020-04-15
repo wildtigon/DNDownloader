@@ -9,12 +9,17 @@
 import Foundation
 
 extension URLSession {
-    func dataTask(with url : URL,timeout:TimeInterval) -> URLSessionDataTask{
-        let range  = DNFileManager.shared.fileSize(filePath: DNCache.tempPath(url: url))
+    func dataTask(with url : URL, headers: [String: Any], timeout:TimeInterval) -> URLSessionDataTask{
+        let range = DNFileManager.shared.fileSize(filePath: DNCache.tempPath(url: url))
         
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: timeout)
+                
         let headRange = "bytes=" + String(range) + "-"
-        request.setValue(headRange, forHTTPHeaderField: "Range")
+        request.addValue(headRange, forHTTPHeaderField: "Range")
+        
+        headers.compactMapValues({$0 as? String}).forEach {
+            request.addValue($1, forHTTPHeaderField: $0)
+        }
         
         let task = dataTask(with: request)
         task.priority = URLSessionTask.defaultPriority
