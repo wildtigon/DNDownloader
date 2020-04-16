@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DownloadURL {
+public struct DownloadURL {
     let url: URL
     var headers: [String: String] = [:]
     
