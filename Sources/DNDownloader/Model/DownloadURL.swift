@@ -7,12 +7,9 @@
 
 import Foundation
 
-open class DownloadURL {
-    let url: URL
-    var headers: [String: String] = [:]
+public protocol DownloadURLProtocol {
+    var url: URL { get }
+    var headers: [String: String] { get }
     
-    public init(stringURL: String, headers: [String: String] = [:]) {
-        self.url = URL(string: stringURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
-        self.headers = headers
-    }
+    init(stringURL: String, headers: [String: String])
 }

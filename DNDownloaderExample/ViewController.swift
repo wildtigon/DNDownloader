@@ -8,6 +8,16 @@
 
 import UIKit
 
+final class DownloadURL: DownloadURLProtocol {
+    private(set) var url: URL
+    private(set) var headers: [String : String]
+    
+    required init(stringURL: String, headers: [String : String] = [:]) {
+        self.url = URL(string: stringURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+        self.headers = headers
+    }
+}
+
 final class ViewController: UIViewController {
     
     @IBAction private func onDownloadButtonClicked(_ sender: UIButton) {
