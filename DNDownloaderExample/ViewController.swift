@@ -11,16 +11,21 @@ import UIKit
 struct DownloadURL {
     let url: URL
     var headers: [String: String] = [:]
+    
+    init(stringURL: String, headers: [String: String] = [:]) {
+        self.url = URL(string: stringURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+        self.headers = headers
+    }
 }
 
 final class ViewController: UIViewController {
     
     @IBAction private func onDownloadButtonClicked(_ sender: UIButton) {
-      startDownloadWithHeaders()
+        startDownloadWithoutHeader()
     }
     
     private func startDownloadWithHeaders() {
-        let staticURL = URL(string: "http://192.168.1.17:8181/api/v1/get_video/")!
+        let staticURL = "http://192.168.1.17:8181/api/v1/get_video/"
         let fileNames = [
             "movie_1.mp4",
             "movie_2.mp4",
@@ -33,7 +38,7 @@ final class ViewController: UIViewController {
                 "store_code": "001",
             ]
             
-            return DownloadURL(url: staticURL.appendingPathComponent(name), headers: headers)
+            return DownloadURL(stringURL: staticURL.appending(name), headers: headers)
         }
         
         print("Start downloading")
@@ -44,14 +49,8 @@ final class ViewController: UIViewController {
     
     private func startDownloadWithoutHeader() {
         let requests = [
-            DownloadURL(url: URL(string: "http://ec2-3-0-94-84.ap-southeast-1.compute.amazonaws.com/datnguyen/s3/public/videos/movie_1.mp4")!),
-            DownloadURL(url: URL(string: "http://ec2-3-0-94-84.ap-southeast-1.compute.amazonaws.com/datnguyen/s3/public/videos/movie_2.mp4")!),
-            DownloadURL(url: URL(string: "http://ec2-3-0-94-84.ap-southeast-1.compute.amazonaws.com/datnguyen/s3/public/videos/movie_3.mp4")!),
-            DownloadURL(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!),
-            DownloadURL(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!),
-            DownloadURL(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4")!),
-            DownloadURL(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4")!),
-            DownloadURL(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4")!),
+            DownloadURL(stringURL: "http://ec2-3-0-94-84.ap-southeast-1.compute.amazonaws.com/datnguyen/s3/public/videos/あああ.mp4"),
+        DownloadURL(stringURL: "http://ec2-3-0-94-84.ap-southeast-1.compute.amazonaws.com/datnguyen/s3/public/videos/いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい.mov"),
         ]
         
         print("Start downloading")

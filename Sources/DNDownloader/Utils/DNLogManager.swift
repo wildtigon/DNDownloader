@@ -19,7 +19,7 @@ final class DNLogManager {
             
         case .detail:
             print("-----DNDownloader-----\n"
-                + "File   : \(file.lastPathComponent)\n"
+                + "File   : \(file.lastPathComponent.decoded)\n"
                 + "Method : \(method)\n"
                 + "Line   : [\(line)]\n"
                 + "Info   : \(info)\n"

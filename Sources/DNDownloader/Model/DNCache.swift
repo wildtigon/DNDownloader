@@ -9,10 +9,6 @@
 import Foundation
 
 public class DNCache {
-//    public static var downloadsDirectory :String {
-//        return DNFileManager.shared.createDirectory(atPath: .downDir)
-//    }
-//
     static func tempPath(url: URL) -> String{
         return url.absoluteString.md5.tmpDir
     }

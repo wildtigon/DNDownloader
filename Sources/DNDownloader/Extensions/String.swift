@@ -27,4 +27,8 @@ extension String {
         let path = NSTemporaryDirectory() as NSString
         return path.appendingPathComponent((self as NSString).lastPathComponent)
     }
+    
+    var decoded: String {
+           return removingPercentEncoding ?? self
+    }
 }
