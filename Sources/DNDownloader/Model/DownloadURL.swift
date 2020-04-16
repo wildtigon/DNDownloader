@@ -10,6 +10,7 @@ import Foundation
 public protocol DownloadURLProtocol {
     var url: URL { get }
     var headers: [String: String] { get }
+    var fileName: String? { get }
     
-    init(stringURL: String, headers: [String: String])
+    init(stringURL: String, headers: [String: String], fileName: String?)
 }

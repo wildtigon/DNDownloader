@@ -19,8 +19,8 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
         }
         
         // the file has been downloaded
-        if  DNFileManager.shared.isFileExist(atPath: DNCache.downloadPath(url: url)){
-            let downloadedURI =  URL(fileURLWithPath: DNCache.downloadPath(url: url))
+        if  DNFileManager.shared.isFileExist(atPath: DNCache.downloadPath(with: seed)){
+            let downloadedURI =  URL(fileURLWithPath: DNCache.downloadPath(with: seed))
             let errorInfo = ["file downloaded": downloadedURI]
             let error = NSError(domain: DNErrorDomain, code: DNError.fileIsExist.rawValue, userInfo: errorInfo)
             onComplete(.failure(error, downloadedURI), seed)

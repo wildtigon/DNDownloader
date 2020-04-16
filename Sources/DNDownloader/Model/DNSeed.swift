@@ -15,24 +15,35 @@ public class DNSeed {
     var callbacks: [Callback]
     var cancelSemaphore: DispatchSemaphore?
     var outputStream: OutputStream?
+    var fileName: String?
     
     var tempPath: String {
         return DNCache.tempPath(url: url)
     }
     
     var downloadPath: String {
-        return DNCache.downloadPath(url: url)
+        return DNCache.downloadPath(with: self)
     }
     
     var downloadFileURL: URL {
-        return URL(fileURLWithPath: DNCache.downloadPath(url: url))
+        return URL(fileURLWithPath: DNCache.downloadPath(with: self))
     }
     
-    init(session: URLSession, url: URL, headers: [String: Any], timeout: TimeInterval) {
+    init(session: URLSession, url: URL, headers: [String: Any], fileName: String?, timeout: TimeInterval) {
         self.progress = Progress()
         self.callbacks = []
         self.downloadTask = session.dataTask(with: url, headers: headers, timeout: timeout)
         self.url = url
+        
+        let pathEx = url.pathExtension
+        if let fileName = fileName, pathEx.count > 0 {
+            self.fileName = "\(fileName).\(pathEx)"
+        }
+        
+    }
+    
+    func getFileName() -> String {
+        return fileName ?? url.lastPathComponent
     }
     
     @discardableResult

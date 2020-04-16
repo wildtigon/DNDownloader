@@ -11,10 +11,12 @@ import UIKit
 final class DownloadURL: DownloadURLProtocol {
     private(set) var url: URL
     private(set) var headers: [String : String]
+    private(set) var fileName: String?
     
-    required init(stringURL: String, headers: [String : String] = [:]) {
+    required init(stringURL: String, headers: [String : String] = [:], fileName: String? = nil) {
         self.url = URL(string: stringURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
         self.headers = headers
+        self.fileName = fileName
     }
 }
 
@@ -49,7 +51,8 @@ final class ViewController: UIViewController {
     
     private func startDownloadWithoutHeader() {
         let requests = [
-            DownloadURL(stringURL: "http://ec2-3-0-94-84.ap-southeast-1.compute.amazonaws.com/datnguyen/s3/public/videos/あああ.mp4"),
+            DownloadURL(stringURL: "http://ec2-3-0-94-84.ap-southeast-1.compute.amazonaws.com/datnguyen/s3/public/videos/あああ.mp4", fileName: "aaa"),
+            DownloadURL(stringURL: "http://ec2-3-0-94-84.ap-southeast-1.compute.amazonaws.com/datnguyen/s3/public/videos/movie_1 backup.mp4"),
         DownloadURL(stringURL: "http://ec2-3-0-94-84.ap-southeast-1.compute.amazonaws.com/datnguyen/s3/public/videos/いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい.mov"),
         ]
         
@@ -69,13 +72,13 @@ final class ViewController: UIViewController {
         let group = DispatchGroup()
         
         requests.forEach{ (req) in
-            DNDownloader.shared.download(with: req.url, headers: req.headers).completion { (result) in
+            DNDownloader.shared.download(with: req.url, headers: req.headers, fileName: req.fileName).completion { (result) in
                 switch result {
                 case .success(let uri):
                     print("Success: \(uri)")
                 case .failure(let error as NSError, let uri):
                     if error.code == DNError.fileIsExist.rawValue, let uri = uri {
-                        print("File exits: \(uri)")
+                        print("File exist at: \(uri)")
                     } else {
                         print("Failed: \(error)")
                     }

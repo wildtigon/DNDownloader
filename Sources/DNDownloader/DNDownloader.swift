@@ -64,10 +64,10 @@ public class DNDownloader: DNDownloaderProtocol {
     }
     
     @discardableResult
-    public func download(with url: DNURL, headers: [String: Any] = [:]) -> DNSeed {
+    public func download(with url: DNURL, headers: [String: Any] = [:], fileName: String?) -> DNSeed {
         switch isURLCorrect(url) {
         case .success(let url):
-            return createSeed(with: url, headers: headers)
+            return createSeed(with: url, headers: headers, fileName: fileName)
         case .failure(_, _):
             fatalError("Please make sure the url or urlString is correct")
         }
@@ -75,13 +75,13 @@ public class DNDownloader: DNDownloaderProtocol {
 }
 
 extension DNDownloader{
-    private func createSeed(with url: URL, headers: [String: Any]) -> DNSeed {
+    private func createSeed(with url: URL, headers: [String: Any], fileName: String?) -> DNSeed {
         if let seed = findSeed(with: url) {
             return seed
         } else {
             barrierQueue.sync(flags: .barrier){
                 let timeout = self.timeout == 0.0 ? DNDownloaderConfig.DEFAULT_TIMEOUT : self.timeout
-                seeds[url] = DNSeed(session: session, url: url, headers: headers, timeout: timeout)
+                seeds[url] = DNSeed(session: session, url: url, headers: headers, fileName: fileName, timeout: timeout)
             }
             
             let seed = findSeed(with: url)!
@@ -200,10 +200,6 @@ extension DNDownloader{
     public func clearAllFiles() {
         DNCache.cleanDownloadFiles()
         DNCache.cleanDownloadTempFiles()
-    }
-    
-    public func getDownloadedURI(from url: URL) -> String {
-        return DNDownloaderConfig.DOWNLOAD_FOLDER.downDir + "/" + url.lastPathComponent
     }
     
     public func getDownloadedURI(from fileName: String) -> String {

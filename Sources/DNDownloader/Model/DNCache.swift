@@ -13,17 +13,17 @@ public class DNCache {
         return url.absoluteString.md5.tmpDir
     }
     
-    static func downloadPath(url: URL) -> String{
-        return DNDownloaderConfig.DOWNLOAD_FOLDER.downDir + "/" + url.lastPathComponent
+    static func downloadPath(with seed: DNSeed) -> String{
+        return DNDownloaderConfig.DOWNLOAD_FOLDER.downDir + "/" + seed.getFileName()
     }
     
-    static func removeTempFile(with url:URL){
+    static func removeTempFile(with url:URL) {
         let path = tempPath(url: url)
         DNFileManager.shared.deleteFile(atPath: path)
     }
     
-    static func removeDownloadedFile(with url: URL){
-        let path = downloadPath(url: url)
+    static func removeDownloadedFile(with seed: DNSeed){
+        let path = downloadPath(with: seed)
         DNFileManager.shared.deleteFile(atPath: path)
     }
     
