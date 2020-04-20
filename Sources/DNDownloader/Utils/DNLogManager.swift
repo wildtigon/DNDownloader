@@ -15,7 +15,7 @@ final class DNLogManager {
             // Nothing to show
             break
         case .simple:
-            print("DNDownloader: \(info)")
+            print("DNDownloader: \(info)\n")
             
         case .detail:
             print("-----DNDownloader-----\n"

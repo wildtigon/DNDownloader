@@ -84,12 +84,13 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
         seed.outputStream = OutputStream(toFileAtPath: seed.tempPath, append: true)
         seed.outputStream?.open()
         
-        DNLogManager.show("start to download \n" + url.absoluteString)
+        DNLogManager.show("didReceive: " + url.absoluteString)
         completionHandler(.allow)
     }
     
     public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         guard let downloader = downloader, let url = dataTask.originalRequest?.url, let seed = downloader.findSeed(with: url) else {
+            DNLogManager.show("didReceive: " + session.description)
             return
         }
         
@@ -102,6 +103,7 @@ extension DNDownloaderDelegate: URLSessionDataDelegate, URLSessionDelegate {
     
     public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         guard let downloader = downloader, let url = task.originalRequest?.url, let seed = downloader.findSeed(with: url) else {
+            DNLogManager.show("didCompleteWithError: " + session.description)
             return
         }
         
